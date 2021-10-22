@@ -1,3 +1,7 @@
+let a = 0;
+let b = 0;
+let c = 0;
+
 function count(){
   if(a > b && a > c) {
     return "You chose mostly a's name, you should learn Python!"
@@ -23,3 +27,23 @@ function choice(value) {
     c = c + 1;
   }
 }
+
+$(document).ready(function() {
+
+  $("#choice").submit(function(event) {
+    event.preventDefault();
+    
+    const music = $("input:radio[name=music]:checked").val();
+    const speed = $("input:radio[name=speed]:checked").val();
+    const spice = $("input:radio[name=spice]:checked").val();
+    const risk = $("input:radio[name=risk]:checked").val();
+    const travel = $("input:radio[name=travel]:checked").val();
+    choice(music);
+    choice(speed);
+    choice(spice);
+    choice(risk);
+    choice(travel);
+    
+    $("#output").text(count());
+  });
+});

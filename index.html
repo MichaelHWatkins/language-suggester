@@ -8,12 +8,12 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Document</title>
+  <title>Programming Language Suggestor</title>
 </head>
 <body>
   <div class="container">
-    <h1>Language Suggestor</h1>
-    <form>
+    <h1>Programming Language Suggestor</h1>
+    <form id="choice">
       <div class="form-group">
         <label for="name">Name:</label>
         <input id="name" class="form-control" type="text">
@@ -78,8 +78,51 @@
           Sometimes
         </label>
       </div>
+
+      <label for="risk">Do you like risk?</label>
+      <div class="radio">
+        <label>
+          <input type="radio" name="risk" value="yes" checked>
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="risk" value="no">
+          No
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="risk" value="sometimes">
+          Sometimes
+        </label>
+      </div>
+
+      <label for="travel">Do you like traveling?</label>
+      <div class="radio">
+        <label>
+          <input type="radio" name="travel" value="yes" checked>
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="travel" value="no">
+          No
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="travel" value="sometimes">
+          Sometimes
+        </label>
+      </div>
       <button type="submit" class="btn btn-dark">Submit!</button>
     </form>
+    <div id="output">
+      
+    </div>
   </div>
 </body>
 </html>
