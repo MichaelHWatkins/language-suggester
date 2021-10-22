@@ -1,19 +1,20 @@
 let a = 0;
 let b = 0;
 let c = 0;
+let name = "name";
 
 function count(){
   if(a > b && a > c) {
-    return "You chose mostly a's name, you should learn Python!"
+    return "You chose mostly a's " + name + ", you should learn Python!"
   }
   else if(b > a && b > c) {
-    return "You chose mostly a's name, you should learn Java!"
+    return "You chose mostly a's " + name + ", you should learn Java!"
   }
   else if(b > a && b > c) {
-    return "You chose mostly c's name, you should learn C!"
+    return "You chose mostly c's " + name + ", you should learn C!"
   }
   else {
-    return "There is no clear answer name, you should start with Python to begin!"
+    return "There is no clear answer " + name + ", you should start with Python to begin!"
   }
 }
 function choice(value) {
@@ -32,7 +33,7 @@ $(document).ready(function() {
 
   $("#choice").submit(function(event) {
     event.preventDefault();
-    
+    name = $("input#name").val()
     const music = $("input:radio[name=music]:checked").val();
     const speed = $("input:radio[name=speed]:checked").val();
     const spice = $("input:radio[name=spice]:checked").val();
