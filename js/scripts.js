@@ -8,9 +8,9 @@ function count(){
     return "You chose mostly a's " + name + ", you should learn Python!"
   }
   else if(b > a && b > c) {
-    return "You chose mostly a's " + name + ", you should learn Java!"
+    return "You chose mostly b's " + name + ", you should learn Java!"
   }
-  else if(b > a && b > c) {
+  else if(c > a && c > b) {
     return "You chose mostly c's " + name + ", you should learn C!"
   }
   else {
